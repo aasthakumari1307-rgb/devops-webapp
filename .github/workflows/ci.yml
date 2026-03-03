@@ -20,8 +20,8 @@ jobs:
         run: echo "Build Successful"
 
       - name: Success Notification
-        run: echo "CI Pipeline Passed" 
-            - name: Send Slack Notification
+        run: echo "CI Pipeline Passed"
+      - name: Send Slack Notification
         if: success()
         run: |
           curl -X POST -H 'Content-type: application/json' \
